@@ -22,8 +22,8 @@ for x in key:
     i +=1
 
 # Swap these lines if a dynamic PT is desired
-pt = 'pt.txt'
-# pt = input("What is the name of the plaintext file?: ")
+# pt = 'pt.txt'
+pt = input("What is the name of the plaintext file?: ")
 with open(pt) as f:
     ptstring = f.read()
 
