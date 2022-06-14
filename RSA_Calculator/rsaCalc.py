@@ -11,8 +11,9 @@ e = 23 # Must be odd, Better if prime. Typically 65537.
 d = 2     # DO NOT CHANGE - This is just to initialize d
           # Will calculate d with next step
 
-# This loop will calculate a compatible d exponent
+# This loop will brute force a compatible d exponent
 # d must be larger than 1 and less than Φ
+# Very Slow! Faster would be to use the Euclidean Algorithm 
 while (d*e % Φ) != 1:
     d +=1
 
