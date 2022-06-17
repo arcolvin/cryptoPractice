@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-p = 11   # Must Be Prime, should be close ish to q
-q = 17  # Must Be Prime, should be close ish to p 
+p =  8613481  # Must Be Prime, should be close ish to q
+q =  8613701 # Must Be Prime, should be close ish to p 
 
 n = p * q # Modulus
 
@@ -14,8 +14,14 @@ d = 2     # DO NOT CHANGE - This is just to initialize d
 # This loop will brute force a compatible d exponent
 # d must be larger than 1 and less than Φ
 # Very Slow! Faster would be to use the Euclidean Algorithm 
+'''
 while (d*e % Φ) != 1:
     d +=1
+'''
+
+# Or because Python is awesome just use the built in POW function
+# only works on python 3.8+
+d = pow(e, -1, Φ)
 
 # Initialize x and y for GCD Calculation
 x = e
