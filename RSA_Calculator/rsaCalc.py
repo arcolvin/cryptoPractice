@@ -1,26 +1,16 @@
 #!/usr/bin/python3
 
-p =  8613481  # Must Be Prime, should be close ish to q
-q =  8613701 # Must Be Prime, should be close ish to p 
+p =  11  # Must Be Prime, should be close ish to q
+q =  17 # Must Be Prime, should be close ish to p 
 
 n = p * q # Modulus
 
 Φ = (p-1) * (q-1) # (Phi) Used to calculate d
 
 e = 23 # Must be odd, Better if prime. Typically 65537.
-d = 2     # DO NOT CHANGE - This is just to initialize d
-          # Will calculate d with next step
+d = None
 
-# This loop will brute force a compatible d exponent
-# d must be larger than 1 and less than Φ
-# Very Slow! Faster would be to use the Euclidean Algorithm 
-'''
-while (d*e % Φ) != 1:
-    d +=1
-'''
-
-# Or because Python is awesome just use the built in POW function
-# only works on python 3.8+
+# This will find our d which is a Modular Inverse
 d = pow(e, -1, Φ)
 
 # Initialize x and y for GCD Calculation
@@ -36,10 +26,12 @@ x = abs(x)
 # Warn User if numbers are not relatively Prime
 if x != 1:
     print("e and d are not relatively prime!")
+    exit()
 
 # Verify D is smaller than Φ
 if d > Φ:
     print("d is too big! Must be smaller than Φ")
+    exit()
 
 # Return all calculated Values
 print("Calculated Values: ")
