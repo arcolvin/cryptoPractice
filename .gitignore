@@ -1,5 +1,4 @@
-pt.txt
-out.txt
+Substitution_Cipher/*.txt
 PrimeGenerator/PrimeLists/primeList.txt
 PrimeGenerator/prime.log
-Steganography/encoded.html
+Steganography/encoded.*
