@@ -1,6 +1,0 @@
-http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php 
-https://personal.utdallas.edu/~muratk/courses/crypto07_files/rsa.pdf 
-https://www.di-mgt.com.au/rsa_alg.html#note3 
-https://www.di-mgt.com.au/euclidean.html 
-https://crypto.stackexchange.com/questions/16174/rsa-private-exponent-primality
-https://www.geeksforgeeks.org/gcd-in-python/
