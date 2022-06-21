@@ -15,19 +15,22 @@ fin = 100000
 
 # while i < fin: # end at fin point
 while True: # Endless
+    i += 1 # For while loop use only
     n = 1
-    i += 1
+    half_i = i/2 # optimized 1
 
     while n < i:
         if i % 2 == 0:
             # print(f"Not a prime: {i}")
             break
         
-        elif i % n == 0 and n != 1:
+        elif i % n == 0 and n != 2:
             # print(f"Not a prime: {i}")
             break
+        elif n >= half_i: # Optimized 1
+            break         # Optimized 1
         
         n += 1
 
-    if n == i: # Original
+    if n >= half_i: # optimized 1
         print(f'Prime Found!: {i}')
