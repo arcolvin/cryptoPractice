@@ -6,7 +6,7 @@ import sys
 This Program will encode a message into a provide HTML text file
 
 This will encode the message as spaces at the end of each line where a single
-space is a space character, 2 spaces is a, 3 is b ...
+space is an a character, 2 spaces is b, 3 is c ...
 
 As a result the longest message codable is equal to the number of lines in a
 given HTML file.
