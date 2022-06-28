@@ -10,6 +10,8 @@ space is an a character, 2 spaces is b, 3 is c ...
 
 As a result the longest message codable is equal to the number of lines in a
 given HTML file.
+
+Need to add a decrypting script.
 '''
 
 def whitespace(source, usrin):
