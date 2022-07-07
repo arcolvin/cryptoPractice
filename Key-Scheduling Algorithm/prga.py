@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+####################
+# Start Generate S #
+####################
+
 # Key Scheduling Algorithm for ARCFour
 
 # Set Key for encoding (Decimal number between 5 and 256 digits)
@@ -29,7 +33,21 @@ binKey = ''
 for x in S:
     binKey += bin(x)[2:].zfill(8)
 
-# Print Results
-print(f"Count of key elements: {len(S)}")
-print(f"Raw Decimal Key List: {S}")
-print(f"Binary Key of 256 Bytes: {binKey}")
+##################
+# END GENERATE S #
+##################
+
+# Pseudo-Random Generation Algorithm
+
+i = 0
+j = 0
+
+while True:
+    i = (i + 1) % 256
+    j = (j + S[i]) % 256
+
+    tmp = S[i]
+    S[i] = S[j]
+    S[j] = tmp
+
+    print(S[(S[i] + S[j]) % 256])
