@@ -7,12 +7,12 @@
 # Key Scheduling Algorithm for ARCFour
 
 # Set Key for encoding (Decimal number between 5 and 256 digits)
-key = '8675309'
+key = [3,255,0,23,65,88,176,204]
 
 # Init Output List
 S = []
 # Measure Key Length
-keylength = len(str(key))
+keylength = len(key)
 
 # Init Key Array
 for i in range(0,256):
@@ -22,7 +22,7 @@ for i in range(0,256):
 # Build Key Array
 j = 0
 for i in range(0,256):
-    j = (j + S[i] + int(key[i % keylength])) % 256
+    j = (j + S[i] + key[i % keylength]) % 256
     # swap values of S[i] and S[j]
     tmp = S[i]
     S[i] = S[j]
