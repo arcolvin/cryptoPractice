@@ -3,7 +3,7 @@
 # Key Scheduling Algorithm for ARCFour
 
 # Set Key for encoding (Decimal number between 5 and 256 digits)
-key = [3,255,0,23,65,88,176,204]
+key = [3,255,167,10,20,30,40,50]
 
 # Init Output List
 S = []
