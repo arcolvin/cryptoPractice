@@ -7,7 +7,12 @@ n = p * q # Modulus
 
 Φ = (p-1) * (q-1) # (Phi) Used to calculate d
 
-e = 23 # Must be odd, Better if prime. Typically 65537.
+e = 23 # Must be Smaller than Φ, must be odd, Better if prime. Typically 65537.
+
+if e > Φ:
+    print("e is too big! Must be smaller than Φ")
+    exit()
+
 d = None
 
 # This will find our d which is a Modular Inverse
