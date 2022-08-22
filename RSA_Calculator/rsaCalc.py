@@ -11,12 +11,21 @@ e = 23 # Must be Smaller than Φ, must be odd, Better if prime. Typically 65537.
 
 if e > Φ:
     print("e is too big! Must be smaller than Φ")
+    print(f"e: {e}")
+    print(f"Φ: {Φ}")
     exit()
 
 d = None
 
 # This will find our d which is a Modular Inverse
 d = pow(e, -1, Φ)
+
+# Verify D is smaller than Φ
+if d > Φ:
+    print("d is too big! Must be smaller than Φ")
+    print(f"d: {d}")
+    print(f"Φ: {Φ}")
+    exit()
 
 # Initialize x and y for GCD Calculation
 x = e
@@ -31,11 +40,6 @@ x = abs(x)
 # Warn User if numbers are not relatively Prime
 if x != 1:
     print("e and d are not relatively prime!")
-    exit()
-
-# Verify D is smaller than Φ
-if d > Φ:
-    print("d is too big! Must be smaller than Φ")
     exit()
 
 # Return all calculated Values
