@@ -20,11 +20,11 @@ def whitespace(source, usrin):
     mesg = ''
 
     # Sanitize User input to ensure only permitted characters are present
-    usrin = filter(lambda x: True if x in alph else False, usrin)
+    usrin = filter(lambda x: True if x.lower() in alph else False, usrin)
 
     # Convert filter object to a string
     for x in usrin:
-        mesg += x
+        mesg += x.lower()
 
     # Open source and destination files
     with open(source, 'r') as f_in, \
@@ -42,7 +42,7 @@ def whitespace(source, usrin):
             # replace line with line + whitespace
             try:
                 # Encode the line with spaces
-                f_out.write(f'{l}{" " * alph.index(mesg[i])}\n')
+                f_out.write(f'{l}{" " * (alph.index(mesg[i]) + 1) }\n')
             except IndexError:
                 # If HTML is longer than message simply return HTML after
                 # message runs out
