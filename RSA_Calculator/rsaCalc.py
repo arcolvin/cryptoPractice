@@ -39,6 +39,7 @@ x = e
 y = d
 
 # Verify GCD of d and e is 1 (If e is prime this should be true)
+# Euclidean Algorithm https://en.wikipedia.org/wiki/Euclidean_algorithm
 while(y):
    x, y = y, x % y
 
